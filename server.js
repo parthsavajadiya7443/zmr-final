@@ -27,6 +27,9 @@ app.engine(
 
 // calling routes
 app.use("/", require("./server/router/router"));
+app.get("/upload", (req, res) => {
+  res.render("layouts/upload", { layout: "layouts/upload" });
+});
 
 app.listen(PORT, () =>
   console.log(`Server is stated on http://localhost:3000`)
